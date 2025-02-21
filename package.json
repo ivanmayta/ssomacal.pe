@@ -13,6 +13,7 @@
     "@midudev/tailwind-animations": "^0.1.0",
     "@tailwindcss/vite": "^4.0.1",
     "astro": "^5.2.1",
+    "slugify": "^1.6.6",
     "tailwindcss": "^4.0.1"
   }
 }
