@@ -1,16 +1,22 @@
 ---
+import ContactBanner from "../sections/ContactBanner.astro"
+import Header from "../sections/Header.astro"
 import "../styles/global.css"
+import { ClientRouter } from "astro:transitions"
 ---
 
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="generator" content={Astro.generator} />
-        <title>Astro Basics</title>
+        <title>SEGURIDAD, SALUD OCUPACIONAL, MEDIO AMBIENTE Y CALIDAD</title>
+        <ClientRouter />
     </head>
     <body>
+        <ContactBanner />
+        <Header />
         <slot />
     </body>
 </html>
