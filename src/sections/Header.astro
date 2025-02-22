@@ -44,7 +44,7 @@ console.dir(pages, { depth: null })
                     <img
                         src="/logo.webp"
                         alt="SSOMACAL Logo"
-                        class="h-60 w-auto"
+                        class="h-60 w-auto aspect-[0.9]" 
                     />
                 </a>
             </div>
@@ -75,7 +75,7 @@ console.dir(pages, { depth: null })
                             {item.subItems && (
                                 <div
                                     id="toggleElement"
-                                    class=" absolute z-50 hidden group-hover:block  bg-white shadow-md rounded-lg py-2"
+                                    class="w-48 absolute z-50 hidden group-hover:block  bg-white shadow-md rounded-lg py-2"
                                 >
                                     {item.subItems.map((subItem) => {
                                         return (
