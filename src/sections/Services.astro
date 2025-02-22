@@ -1,32 +1,6 @@
 ---
 import Container from "../components/Container.astro"
-
-const services = [
-    {
-        title: "Consultoría Ambiental",
-        img: "https://ssomacal.com/wp-content/uploads/2022/04/Organizacion-de-programas-de-capacitaciones-en-seguridad-y-salud..jpg",
-        description:
-            "Organización de programas de capacitación en Gestión Ambiental",
-    },
-    {
-        title: "Asesoría Laboral",
-        img: "https://ssomacal.com/wp-content/uploads/2022/04/Asesoria-Laboral.jpg",
-        description:
-            "Elaboración de los Planes de Vigilancia frente al COVID-19 conforme a lo establecido por el MINSA",
-    },
-    {
-        title: "Capacitación Integral",
-        img: "https://ssomacal.com/wp-content/uploads/2022/04/Capacitacion-Integral-300x225.jpg",
-        description:
-            "Elaboración de Protocolos y Procedimientos de prevención y protección frente a contingencias de accidentes de trabajo.",
-    },
-    {
-        title: "Prevención de Riesgos",
-        img: "https://ssomacal.com/wp-content/uploads/2022/04/Monitoreo-de-agentes-fisicos-quimicos-y-biologicos-presentes-en-ambiente-de-trabajos-300x300.jpg",
-        description:
-            "Monitoreo de agentes físicos, químicos y biológicos, presente en ambiente de trabajos.",
-    },
-]
+import SERVICIOS from "../data/services"
 ---
 
 <section class="py-20">
@@ -43,11 +17,14 @@ const services = [
         </p>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-14">
             {
-                services.map((service) => (
-                    <div class="flex flex-col bg-white shadow-md p-6 rounded-lg text-center items-center">
+                SERVICIOS.map((service) => (
+                    <a
+                        href={`/servicios/${service.id}`}
+                        class="flex flex-col bg-white shadow-md p-6 rounded-lg text-center items-center"
+                    >
                         <img
                             class="w-full lg:aspect-auto aspect-square object-cover transition-transform hover:animate-pulsing infinite"
-                            src={service.img}
+                            src={service?.images[0]}
                             alt=""
                         />
                         <h3 class="text-2xl font-bold mt-4 mb-2 text-[#0b1f74]">
@@ -56,7 +33,7 @@ const services = [
                         <p class="text-lg font-semibold opacity-90">
                             {service.description}
                         </p>
-                    </div>
+                    </a>
                 ))
             }
         </div>

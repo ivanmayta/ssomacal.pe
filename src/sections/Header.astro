@@ -1,10 +1,10 @@
 ---
 import Container from "../components/Container.astro"
 import ArrowDown from "../icons/arrow-down.svg"
-
+import SERVICIOS from "../data/services"
 //TODO: fix click toggle on desktop mode
 
-const itemNavs = [
+const pages = [
     {
         title: "INICIO",
         href: "/",
@@ -15,25 +15,7 @@ const itemNavs = [
     },
     {
         title: "SERVICIOS",
-        subItems: [
-            {
-                title: "CAPACITACIONES",
-                href: "/capacitaciones",
-            },
-            {
-                title: "CAPACITACIONES",
-                href: "/capacitaciones",
-            },
-            {
-                title: "CAPACITACIONES",
-                href: "/capacitaciones",
-            },
-            {
-                title: "CAPACITACIONES",
-                href: "/capacitaciones",
-            },
-            // Agrega más subitems si es necesario
-        ],
+        subItems: SERVICIOS,
     },
     {
         title: "STAFF DE PROFESIONALES",
@@ -48,6 +30,8 @@ const itemNavs = [
         href: "/contacto",
     },
 ]
+
+console.dir(pages, { depth: null })
 ---
 
 <header class="w-full bg-white shadow-sm">
@@ -67,7 +51,7 @@ const itemNavs = [
 
             <nav class="w-full flex flex-wrap justify-center space-x-8">
                 {
-                    itemNavs.map((item) => (
+                    pages.map((item) => (
                         <div class="relative group">
                             {item.href ? (
                                 <a
@@ -93,14 +77,16 @@ const itemNavs = [
                                     id="toggleElement"
                                     class=" absolute z-50 hidden group-hover:block  bg-white shadow-md rounded-lg py-2"
                                 >
-                                    {item.subItems.map((subItem) => (
-                                        <a
-                                            href={subItem.href}
-                                            class="block px-4 py-2 text-gray-600 hover:bg-gray-100"
-                                        >
-                                            {subItem.title}
-                                        </a>
-                                    ))}
+                                    {item.subItems.map((subItem) => {
+                                        return (
+                                            <a
+                                                href={`/servicios/${subItem.id}`}
+                                                class="block px-4 py-2 text-gray-600 hover:text-blue-900"
+                                            >
+                                                {subItem.title}
+                                            </a>
+                                        )
+                                    })}
                                 </div>
                             )}
                         </div>

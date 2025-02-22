@@ -3,7 +3,12 @@ import slugify from "slugify"
 const servicios = [
     {
         title: "Consultoría Ambiental",
-        image: "https://ssomacal.com/wp-content/uploads/2022/04/Organizacion-de-programas-de-capacitaciones-en-seguridad-y-salud..jpg",
+        description:
+            "Organización de programas de capacitación en Gestión Ambiental",
+        images: [
+            "https://ssomacal.com/wp-content/uploads/2022/04/Organizacion-de-programas-de-capacitaciones-en-seguridad-y-salud..jpg",
+            "https://ssomacal.com/wp-content/uploads/2022/04/Proteccion-legal-frente-a-inspecciones-de-SUNAFIL..jpg",
+        ],
         actions: [
             "Medicina ocupacional",
             "Realización de elecciones para conformar e instalar el Comité de Seguridad y Salud en el trabajo",
@@ -15,8 +20,13 @@ const servicios = [
         ],
     },
     {
-        title: "Servicio3",
-        image: "https://ssomacal.com/wp-content/uploads/2022/04/Asesoria-Laboral.jpg",
+        title: "Asesoría Laboral",
+        images: [
+            "https://ssomacal.com/wp-content/uploads/2022/04/Asesoria-Laboral.jpg",
+            "https://ssomacal.com/wp-content/uploads/2022/06/ELABORACION-DE-MATRIZ-IPERC-Y-MAPA-DE-RIESGO.jpg",
+        ],
+        description:
+            "Elaboración de los Planes de Vigilancia frente al COVID-19 conforme a lo establecido por el MINSA",
         actions: [
             "Plan de manejo de RRSS",
             "Residuos Sólidos. Manejo y disposición final",
@@ -29,7 +39,12 @@ const servicios = [
     },
     {
         title: "Capacitación Integral",
-        image: "https://ssomacal.com/wp-content/uploads/2022/04/Capacitacion-Integral-300x225.jpg",
+        images: [
+            "https://ssomacal.com/wp-content/uploads/2022/04/Capacitacion-Integral-300x225.jpg",
+            "https://ssomacal.com/wp-content/uploads/2022/06/ELABORACION-DE-MATRIZ-IPERC-Y-MAPA-DE-RIESGO.jpg",
+        ],
+        description:
+            "Elaboración de Protocolos y Procedimientos de prevención y protección frente a contingencias de accidentes de trabajo.",
         actions: [
             "Investigación de accidentes",
             "Primeros auxilios",
@@ -46,7 +61,12 @@ const servicios = [
     },
     {
         title: "Prevención de Riesgos",
-        image: "https://ssomacal.com/wp-content/uploads/2022/04/Monitoreo-de-agentes-fisicos-quimicos-y-biologicos-presentes-en-ambiente-de-trabajos-300x300.jpg",
+        images: [
+            "https://ssomacal.com/wp-content/uploads/2022/04/Monitoreo-de-agentes-fisicos-quimicos-y-biologicos-presentes-en-ambiente-de-trabajos-300x300.jpg",
+            "https://ssomacal.com/wp-content/uploads/2022/04/Monitoreo-Plan-de-manejo-de-RRSS-1.jpg",
+        ],
+        description:
+            "Monitoreo de agentes físicos, químicos y biológicos, presente en ambiente de trabajos.",
         actions: [
             "Plan de manejo de RRSS",
             "Residuos Sólidos. Manejo y disposición final",
