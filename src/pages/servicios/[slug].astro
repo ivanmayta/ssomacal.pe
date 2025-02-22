@@ -7,22 +7,24 @@ import Container from "../../components/Container.astro"
 export const getStaticPaths = (() => {
     const paths = SERVICIOS.map(({ id, title, images, actions }) => ({
         params: { slug: id },
-        props: { title, images, actions },
+        props: { title, images, actions, id },
     }))
     return paths
 }) satisfies GetStaticPaths
 
-const { title, images, actions } = Astro.props
+const { title, images, actions, id } = Astro.props
 ---
 
 <Layout>
     <div class="relative bg-slate-950">
         <img
+            transition:name={id}
             class="w-full aspect-video object-cover max-h-[80vh] opacity-80"
             src={images[1]}
-            alt=""
+            alt={`${title} image`}
         />
         <h1
+            transition:name={`title-${id}`}
             class="text-white font-bold text-6xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
         >
             {title}

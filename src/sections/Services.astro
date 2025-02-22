@@ -23,11 +23,15 @@ import SERVICIOS from "../data/services"
                         class="flex flex-col bg-white shadow-md p-6 rounded-lg text-center items-center"
                     >
                         <img
+                            transition:name={service.id}
                             class="w-full lg:aspect-auto aspect-square object-cover transition-transform hover:animate-pulsing infinite"
                             src={service?.images[0]}
                             alt=""
                         />
-                        <h3 class="text-2xl font-bold mt-4 mb-2 text-[#0b1f74]">
+                        <h3
+                            transition:name={`title-${service.id}`}
+                            class="text-2xl font-bold mt-4 mb-2 text-[#0b1f74]"
+                        >
                             {service.title}
                         </h3>
                         <p class="text-lg font-semibold opacity-90">
