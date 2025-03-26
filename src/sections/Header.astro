@@ -97,12 +97,19 @@ console.dir(pages, { depth: null })
     </Container>
 </header>
 <script>
-    const btn = document.getElementById("toggle")
+
+    document.addEventListener("astro:page-load",()=>{
+
+const btn = document.getElementById("toggle")
     const toggleElement = document.getElementById("toggleElement")
     btn?.addEventListener("click", () => {
         console.log("click")
         toggleElement?.classList.toggle("hidden")
     })
+
+
+})
+    
 </script>
 
 <style>
