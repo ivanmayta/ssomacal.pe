@@ -75,7 +75,7 @@ console.dir(pages, { depth: null })
                             {item.subItems && (
                                 <div
                                     id="toggleElement"
-                                    class="w-48 absolute z-50 hidden group-hover:block  bg-white shadow-md rounded-lg py-2"
+                                    class="sm:w-48 absolute z-50 hidden group-hover:block  bg-white shadow-md rounded-lg py-2"
                                 >
                                     {item.subItems.map((subItem) => {
                                         return (
@@ -97,19 +97,14 @@ console.dir(pages, { depth: null })
     </Container>
 </header>
 <script>
-
-    document.addEventListener("astro:page-load",()=>{
-
-const btn = document.getElementById("toggle")
-    const toggleElement = document.getElementById("toggleElement")
-    btn?.addEventListener("click", () => {
-        console.log("click")
-        toggleElement?.classList.toggle("hidden")
+    document.addEventListener("astro:page-load", () => {
+        const btn = document.getElementById("toggle")
+        const toggleElement = document.getElementById("toggleElement")
+        btn?.addEventListener("click", () => {
+            console.log("click")
+            toggleElement?.classList.toggle("hidden")
+        })
     })
-
-
-})
-    
 </script>
 
 <style>

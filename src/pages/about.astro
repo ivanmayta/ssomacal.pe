@@ -1,10 +1,147 @@
 ---
-import Container from "../components/Container.astro";
-import Layout from "../layouts/Layout.astro";
+import Container from "../components/Container.astro"
+import Layout from "../layouts/Layout.astro"
+import Footer from "../sections/Footer.astro"
+
+/*
+Convocar a la elección de un Comité o un Supervisor de Seguridad y Salud en el Trabajo paritario entre los trabajadores y los representantes de la empresa.
+Elaborar e implementar dentro de sus empresas un Sistema de Gestión en Seguridad y Salud en el Trabajo también denominado SOMA a fin de prevenir la ocurrencia de accidentes de trabajo y enfermedades ocupacionales.
+Elaboración del Plan Anual de Seguridad y Salud, el Reglamento Interno de Seguridad de acuerdo a su actividad, elaborar la matriz IPER, el Plan de Contingencias entre otros protocolos de prevención.
+Realización a lo largo de cada año de charlas de capacitación e inducción a sus trabajadores en temas de prevención de incidentes y accidentes de trabajo. La Ley exige por lo menos 04 capacitaciones al año.
+Realización de simulacros en casos de emergencia como sismos, incendios y evacuaciones médicas.
+Realización periódica de inspecciones internas de los equipos de emergencia obligatorios que tienen que contar las empresas como extintores contra incendios, luces de emergencia, señalética adecuada, instalación de pozo a tierra, de entrega y uso obligatorio de equipos de protección personal EPP’S entre otros.
+Toma de exámenes médicos ocupacionales EMO’S, a sus trabajadores cada 02 años.
+Realizar sesiones mensuales a través del Comité o Supervisor de Seguridad y Salud sobre el cumplimiento de los protocolos de seguridad detallados en el Plan Anual
+Llevar los Registros Obligatorios del Sistema: entrega de EPP’S, de capacitación, de accidentes de trabajo, de auditoria entre otros.
+*/
+const responsabilities = [
+    "Convocar a la elección de un Comité o un Supervisor de Seguridad y Salud en el Trabajo paritario entre los trabajadores y los representantes de la empresa.",
+    "Elaborar e implementar dentro de sus empresas un Sistema de Gestión en Seguridad y Salud en el Trabajo también denominado SOMA a fin de prevenir la ocurrencia de accidentes de trabajo y enfermedades ocupacionales.",
+    "Elaboración del Plan Anual de Seguridad y Salud, el Reglamento Interno de Seguridad de acuerdo a su actividad, elaborar la matriz IPER, el Plan de Contingencias entre otros protocolos de prevención.",
+    "Realización a lo largo de cada año de charlas de capacitación e inducción a sus trabajadores en temas de prevención de incidentes y accidentes de trabajo. La Ley exige por lo menos 04 capacitaciones al año.",
+    "Realización de simulacros en casos de emergencia como sismos, incendios y evacuaciones médicas.",
+    "Realización periódica de inspecciones internas de los equipos de emergencia obligatorios que tienen que contar las empresas como extintores contra incendios, luces de emergencia, señalética adecuada, instalación de pozo a tierra, de entrega y uso obligatorio de equipos de protección personal EPP’S entre otros.",
+    "Toma de exámenes médicos ocupacionales EMO’S, a sus trabajadores cada 02 años.",
+    "Realizar sesiones mensuales a través del Comité o Supervisor de Seguridad y Salud sobre el cumplimiento de los protocolos de seguridad detallados en el Plan Anual",
+    "Llevar los Registros Obligatorios del Sistema: entrega de EPP’S, de capacitación, de accidentes de trabajo, de auditoria entre otros.",
+]
 ---
 
 <Layout>
-    <Container>
-        <h1>About section</h1>
-    </Container>
+    <div class="relative h-full max-h-[80vh]">
+        <div
+            class="z-10 absolute inset-0 bg-blue-900 opacity-40 mix-blend-multiply"
+        >
+        </div>
+        <img
+            class="w-full h-full aspect-video brightness-50 object-cover"
+            src={"/about.jpg"}
+        />
+        <div
+            class="w-full h-full z-20 absolute flex items-center top-0 text-center text-white"
+        >
+            <Container>
+                <h1 class="text-white font-bold text-6xl pb-4">
+                    ¿Quiénes somos?
+                </h1>
+                <p class="font-semibold text-lg pb-14 max-w-[100ch] mx-auto">
+                    Somos una organización compuesta por ingenieros, abogados,
+                    médicos ocupacionales y técnicos con amplia experiencia en
+                    la elaboración, implementación, monitoreo y seguimiento de
+                    Sistemas de Gestión de Seguridad Ocupacional y Medio
+                    Ambiente (SOMA) conforme a lo que estipula y exige la Ley N°
+                    29783, su Reglamento D.S. 005-2012-TR y las normas
+                    complementarias en Seguridad y Salud en el Trabajo en
+                    nuestro país.
+                </p>
+                <a
+                    class="border px-6 py-2 hover:text-amber-300 self-center"
+                    href="/">Informes</a
+                >
+            </Container>
+        </div>
+    </div>
+    <div class="bg-[#0b1f74] py-20 text-white text-center text-lg">
+        <Container>
+            <p class="max-w-[100ch] mx-auto">
+                Nuestros servicios, asesoría y consultoría abarcan todas las
+                actividades de las miles de empresas que desarrollan sus
+                emprendimientos a lo largo del territorio nacional.
+                Principalmente estamos dirigiendo nuestros servicios a las
+                <strong> PYMES, a las MYPES y medianas empresas </strong>
+                que desconocen la existencia de implementar de manera obligatoria
+                por mandato de la Ley, sus propios Sistemas de Seguridad Ocupacional
+                y Medio Ambiente también denominados sistemas SOMA en beneficio de
+                sus trabajadores en la prevención de accidentes y enfermedades laborales.
+            </p>
+            <br />
+            <br />
+            <p class="max-w-[100ch] mx-auto">
+                Finalmente, nuestros servicios están al alcance económico de
+                aquellas empresas medianas o pequeñas que no pueden invertir
+                grandes sumas de dinero en los Sistemas SOMA que generalmente
+                brindan la mayoría de las empresas dedicadas a elaborar Sistemas
+                de Seguridad, siendo demasiado costosos y sofisticados, fuera
+                del alcance de empresas nuevas o medianas.
+            </p>
+        </Container>
+    </div>
+    <div class="flex flex-col py-20 text-center text-lg space-y-5">
+        <h2 class="text-3xl font-extrabold text-center mb-6 text-[#0b1f74]">
+            Ley de seguridad y salud en el trabajo
+        </h2>
+        <hr class="w-14 self-center border-2 border-[#0b1f74] mb-8" />
+        <p class="max-w-[100ch] mx-auto">
+            La Ley N° 29783, su Reglamento dictado a través del D.S. N° 005-
+            2012-TR y las normas complementarias del tema establecen entre otros
+            temas, lo siguiente:
+        </p>
+        <h3 class="text-2xl font-bold text-zinc-900">
+            Artículo 1. Objeto de la Ley
+        </h3>
+        <p class="max-w-[100ch] mx-auto">
+            La Ley de Seguridad y Salud en el Trabajo tiene como objetivo
+            promover una cultura de prevención de riesgos laborales en el país.
+            Para ello, cuenta con el deber de prevención de los empleadores, el
+            rol de fiscalización y control del Estado y la participación de los
+            trabajadores y sus organizaciones sindicales, quienes, a través del
+            diálogo social, velan por la promoción, difusión y cumplimiento de
+            la normativa sobre la materia.
+        </p>
+        <h3 class="text-2xl font-bold text-zinc-900">
+            Artículo 2. Ámbito de aplicación
+        </h3>
+        <p class="max-w-[100ch] mx-auto">
+            La presente Ley es aplicable a todos los sectores económicos y de
+            servicios; comprende a todos los empleadores y los trabajadores bajo
+            el régimen laboral de la actividad privada en todo el territorio
+            nacional, trabajadores del sector público, trabajadores de las
+            Fuerzas Armadas y de la Policía Nacional del Perú y trabajadores por
+            cuenta propia.
+        </p>
+    </div>
+    <div>
+        <h2 class="bg-amber-500 text-center text-2xl font-bold py-2">
+            RESPONSABILIDADES DE LA EMPRESA Y EMPLEADORES
+        </h2>
+        <Container>
+            <ul class="list-disc list-inside text-base mt-6 max-w-5xl mx-auto">
+                {
+                    responsabilities.map((responsability) => (
+                        <li class="mb-2">{responsability}</li>
+                    ))
+                }
+            </ul>
+        </Container>
+        <div class="grid grid-cols-3 grid-rows-3">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+    </div>
+
+    <Footer />
 </Layout>

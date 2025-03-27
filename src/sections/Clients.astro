@@ -1,0 +1,87 @@
+---
+const clients = [
+    { name: "Cliente 1", logo: "/images/clients/client1.jpg" },
+    { name: "Cliente 2", logo: "/images/clients/client2.png" },
+    { name: "Cliente 3", logo: "/images/clients/client3.jpg" },
+    { name: "Cliente 4", logo: "/images/clients/client4.jpg" },
+    { name: "Cliente 5", logo: "/images/clients/client5.png" },
+]
+---
+
+<section class="slider pb-32">
+    <h2 class="text-3xl font-extrabold text-center mb-6 text-[#0b1f74]">
+        Nuestros Clientes
+    </h2>
+    <hr class="w-14 self-center border-2 border-[#0b1f74] mb-8" />
+    <ul class="slide-track gap-12 items-center">
+        {
+            clients.map((client) => (
+                <li class="slide w-[250px] h-auto">
+                    <img width="250" src={client.logo} alt={client.name} />
+                </li>
+            ))
+        }
+        {
+            clients.map((client) => (
+                <li class="slide w-[250px] h-auto">
+                    <img width="250" src={client.logo} alt={client.name} />
+                </li>
+            ))
+        }
+    </ul>
+</section>
+<style>
+    @mixin white-gradient {
+        background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(255, 255, 255, 0) 100%
+        );
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-250px * 7));
+        }
+    }
+
+    .slider {
+        display: flex;
+        flex-direction: column;
+        background: white;
+        box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        max-width: 1024px;
+
+        &::before,
+        &::after {
+            @include white-gradient;
+            content: "";
+            position: absolute;
+            width: 200px;
+            z-index: 2;
+        }
+
+        &::after {
+            right: 0;
+            top: 0;
+            transform: rotateZ(180deg);
+        }
+
+        &::before {
+            left: 0;
+            top: 0;
+        }
+
+        .slide-track {
+            animation: scroll 40s linear infinite;
+            display: flex;
+            width: calc(250px * 14);
+        }
+    }
+</style>

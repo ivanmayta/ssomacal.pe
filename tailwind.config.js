@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-import animations from '@midudev/tailwind-animations'
+import animations from "@midudev/tailwind-animations"
 
 export default {
     theme: {
@@ -12,6 +12,22 @@ export default {
                 "2xl": "1424px",
             },
         },
+        extend: {
+            keyframes: {
+                "linear-infinite": {
+                    from: {
+                        transform: "translateX(0%)",
+                    },
+                    to: {
+                        transform: "translateX(calc(250px*7))",
+                    },
+                },
+            },
+            animation: {
+                "linear-infinite": "linear-infinite 40s linear infinite",
+            },
+        },
     },
+
     plugins: [animations],
 }
