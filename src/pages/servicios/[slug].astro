@@ -19,15 +19,16 @@ const { title, images, actions, id } = Astro.props
 
 <Layout>
     <div class="relative bg-slate-950">
+        <div class="z-10 absolute inset-0"></div>
         <img
             transition:name={id}
-            class="w-full aspect-video object-cover max-h-[80vh] opacity-80"
+            class="w-full aspect-video object-cover max-h-[80vh] brightness-50"
             src={images[1]}
             alt={`${title} image`}
         />
         <h1
             transition:name={`title-${id}`}
-            class="text-white font-bold text-6xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+            class="text-white z-20 font-bold text-6xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
         >
             {title}
         </h1>
