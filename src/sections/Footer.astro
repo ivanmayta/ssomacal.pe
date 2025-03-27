@@ -1,7 +1,58 @@
-<section class="bg-slate-900 text-center text-zinc-300">
-    Desarrollado por: <a
-        target="_blank"
-        class="underline hover:font-semibold font-medium hover:text-white"
-        href="https://iverse.dev">iverse.dev</a
+---
+import Container from "../components/Container.astro"
+---
+
+<footer class="relative text-white">
+    <div
+        class="absolute inset-0 bg-[url(ecol.jpg)] bg-fixed bg-cover bg-center brightness-50 z-0"
     >
-</section>
+    </div>
+    <Container class="relative z-10">
+        <div class="grid sm:grid-cols-3 gap-6 py-24">
+            <div class="bg-[#03081EF2] p-4">
+                <img src="/ssomacal.png" alt="" />
+                <br />
+                <p>
+                    Somos una organización compuesta por ingenieros, abogados,
+                    médicos ocupacionales y técnicos con amplia experiencia en
+                    la elaboración, implementación, monitoreo y seguimiento de
+                    <strong>
+                        Sistemas de Gestión de Seguridad Ocupacional y Medio
+                        Ambiente (SOMA).
+                    </strong>
+                </p>
+            </div>
+            <div class="bg-[#03081EF2] p-4">
+                <h4 class="text-2xl font-bold">Atención al cliente</h4>
+                <hr class="w-16 border-3 my-4" />
+                <ul class="flex flex-col gap-2">
+                    <a href="/about">✔ Quiénes somos</a>
+                    <a href="/services">✔ Servicios</a>
+                    <a href="/capacitaciones">✔ capacitaciones</a>
+                    <a href="/staff-de-profesionales"
+                        >✔ Staff de profesionales</a
+                    >
+                    <a href="/contact">✔ Contacto</a>
+                </ul>
+            </div>
+            <div class="bg-[#03081EF2] p-4">
+                <h4 class="text-2xl font-bold">Síguenos</h4>
+                <hr class="w-16 border-3 my-4" />
+                <div class="flex justify-center overflow-hidden rounded-lg p-1">
+                    <!-- Padding interno y bordes redondeados -->
+                    <iframe
+                        name="fbb1417ded2163639"
+                        width=""
+                        height=""
+                        data-testid="fb:page Facebook Social Plugin"
+                        title="fb:page Facebook Social Plugin"
+                        allowtransparency="true"
+                        allowfullscreen="true"
+                        allow="encrypted-media"
+                        src="https://www.facebook.com/v22.0/plugins/page.php?app_id=&channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Dfd03f766d2edc0b3f%26domain%3Dlocalhost%26is_canvas%3Dfalse%26origin%3Dhttp%253A%252F%252Flocalhost%253A4321%252Ffe9a62ae7817365fd%26relation%3Dparent.parent&container_width=500&height=20&href=https%3A%2F%2Fwww.facebook.com%2Fempresaperuanaconstituida%2F&locale=es_ES&sdk=joey&tabs=timeline&width="
+                        class=""></iframe>
+                </div>
+            </div>
+        </div>
+    </Container>
+</footer>

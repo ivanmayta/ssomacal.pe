@@ -3,6 +3,8 @@ import type { GetStaticPaths } from "astro"
 import Layout from "../../layouts/Layout.astro"
 import SERVICIOS from "../../data/services"
 import Container from "../../components/Container.astro"
+import Footer from "../../sections/Footer.astro"
+import FooterBanner from "../../sections/FooterBanner.astro"
 
 export const getStaticPaths = (() => {
     const paths = SERVICIOS.map(({ id, title, images, actions }) => ({
@@ -43,4 +45,5 @@ const { title, images, actions, id } = Astro.props
             </ul>
         </Container>
     </div>
+    <Footer />
 </Layout>
