@@ -1,5 +1,7 @@
 ---
 import ContactBanner from "../sections/ContactBanner.astro"
+import Footer from "../sections/Footer.astro"
+import FooterBanner from "../sections/FooterBanner.astro"
 import Header from "../sections/Header.astro"
 import "../styles/global.css"
 import { ClientRouter } from "astro:transitions"
@@ -18,6 +20,8 @@ import { ClientRouter } from "astro:transitions"
         <ContactBanner />
         <Header />
         <slot />
+        <Footer />
+        <FooterBanner />
     </body>
 </html>
 
