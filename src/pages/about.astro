@@ -120,27 +120,96 @@ const responsabilities = [
             cuenta propia.
         </p>
     </div>
-    <div>
+    <div class="bg-cyan-100">
         <h2 class="bg-amber-500 text-center text-2xl font-bold py-2">
             RESPONSABILIDADES DE LA EMPRESA Y EMPLEADORES
         </h2>
-        <Container>
-            <ul class="list-disc list-inside text-base mt-6 max-w-5xl mx-auto">
+        <br />
+        <Container class="sm:px-0">
+            <ul
+                class="list-disc list-inside text-base max-w-5xl mx-auto px-4 pb-12"
+            >
                 {
                     responsabilities.map((responsability) => (
                         <li class="mb-2">{responsability}</li>
                     ))
                 }
             </ul>
+            <div
+                class="grid grid-cols-2 md:grid-cols-4 grid-rows-2 mx-auto w-full gap-4"
+            >
+                <div
+                    class="aspect-square flex items-center justify-center bg-[url(/helmets.jpg)] col-span-2 row-span-3"
+                >
+                    <article class="bg-amber-500 sm:w-[90%] p-8">
+                        <h4 class="text-center text-2xl font-bold">
+                            QUÉ SUCEDE EN CASO DE INCUMPLIMIENTO?
+                        </h4>
+                        <br />
+                        <ul class="list-disc list-inside">
+                            <li>
+                                Sanciones y multas consideradas como muy graves
+                                por el incumplimiento en la implementación de
+                                las normas de Seguridad y Salud en el Trabajo.
+                            </li>
+                            <li>
+                                Responsabilidad penal del representante legal en
+                                caso de accidentes de trabajo con consecuencias
+                                de muerte o lesiones graves de algún trabajador
+                                de la
+                            </li>
+                            <li>
+                                Descalificación de ser proveedores de
+                                corporaciones o grupos económicos nacionales e
+                                internacionales que exigen la homologación e
+                                implementación de Sistemas SOMA.
+                            </li>
+                            <li>
+                                Ser denunciados ante SUNAFIL por el
+                                incumplimiento de la Ley N° 29783.
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="col-span-2">
+                    <h3 class="bg-amber-500 text-center font-bold text-2xl">
+                        ARTÍCULO 188 - A DEL CÓDIGO PENAL
+                    </h3>
+                    <div class="px-4">
+                        <br />
+                        <p>
+                            El que infringiendo las normas de seguridad y salud
+                            en el trabajo y estando legalmente obligado, no
+                            adopte las medidas preventivas necesarias para que
+                            los trabajadores desempeñen su actividad, será
+                            reprimido con pena privativa de libertad no menor a
+                            2 años ni mayor de 5 años.
+                        </p>
+                        <br />
+                        <hr />
+                        <br />
+                        <p>
+                            Si como consecuencia de una inobservancia de las
+                            normas de seguridad y salud en el trabajo, ocurre un
+                            accidente de trabajo con consecuencias de muerte o
+                            lesiones graves, para trabajadores o terceros, la
+                            pena privativa de libertad será no menor de 5 ni
+                            mayor de 10 años.
+                        </p>
+                        <br />
+                        <p>
+                            Los días de descanso médico como consecuencia de
+                            accidente de trabajo o enfermedad ocupacional,
+                            debidamente comprobados, serán computables para el
+                            pago de las utilidades.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-span-2 sm:p-4">
+                    <img src="/art-188.jpg" alt="" />
+                </div>
+            </div>
         </Container>
-        <div class="grid grid-cols-3 grid-rows-3">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
-        </div>
     </div>
 
     <Footer />
